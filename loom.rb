@@ -5,13 +5,13 @@
 class Loom < Formula
   desc "LLM memory: SQLite + BM25 + LLM, no embeddings."
   homepage "https://github.com/Mauto82/loom"
-  version "0.4.1"
+  version "0.4.2"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/Mauto82/loom/releases/download/v0.4.1/loom_0.4.1_macos_x86_64.tar.gz"
-      sha256 "bd45d829b9ac5332ba561d6be3c5ff96677edc629153d3c4ddbac0c993fa70e4"
+      url "https://github.com/Mauto82/loom/releases/download/v0.4.2/loom_0.4.2_macos_x86_64.tar.gz"
+      sha256 "89610eee895aa777403eddd647fbbeb8338cc8d374f1a8a9857ce71600775bd0"
 
       define_method(:install) do
         bin.install "loom"
@@ -19,8 +19,8 @@ class Loom < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/Mauto82/loom/releases/download/v0.4.1/loom_0.4.1_macos_arm64.tar.gz"
-      sha256 "845ca6644c17f00646e4cd04849263d0a0e71b9d58143ef2dbe1c7aa1a4109f0"
+      url "https://github.com/Mauto82/loom/releases/download/v0.4.2/loom_0.4.2_macos_arm64.tar.gz"
+      sha256 "806d5a315061b3aa29790b6db2e451c2eb37bf9016c8e7f3ef67f2fe69330272"
 
       define_method(:install) do
         bin.install "loom"
@@ -31,16 +31,16 @@ class Loom < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Mauto82/loom/releases/download/v0.4.1/loom_0.4.1_linux_x86_64.tar.gz"
-      sha256 "0d8753b2a9b8b0d4b884529b15344c95cfa10e606de6f34468489d9250c9f279"
+      url "https://github.com/Mauto82/loom/releases/download/v0.4.2/loom_0.4.2_linux_x86_64.tar.gz"
+      sha256 "2dc5a02ed672d6f7a4bd582279cf9258dd3e802603dc7a1206aac606dee43eb4"
       define_method(:install) do
         bin.install "loom"
         bin.install "loom-mcp"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Mauto82/loom/releases/download/v0.4.1/loom_0.4.1_linux_arm64.tar.gz"
-      sha256 "789db9d0f5fc4e7bfbf222bfe06e6ad8df4ec5ef13bc09390cab6855aaf64ede"
+      url "https://github.com/Mauto82/loom/releases/download/v0.4.2/loom_0.4.2_linux_arm64.tar.gz"
+      sha256 "2fc05a77d942d231a85d6395a0882db903d8ab06016b95cc50f961ea3e02ddc7"
       define_method(:install) do
         bin.install "loom"
         bin.install "loom-mcp"
